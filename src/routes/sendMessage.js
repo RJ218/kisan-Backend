@@ -48,7 +48,7 @@ router.post('/saveMessage',async function(req, res){
     var newMessage = await new messageOtp({Otp: otp,
         UserPhoneNo: phoneNo})
     axios.post(
-        'http://localhost:3001/sendOtp',
+        'https://kisanbackend.herokuapp.com/sendOtp',
         {
             phoneNo: phoneNo,
             otp : otp ,
